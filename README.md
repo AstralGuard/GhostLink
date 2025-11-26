@@ -76,7 +76,7 @@ Place all demonstration files inside the payloads directory.
 
 ────────────────────────────────────────
 
-NOTE: We have added some apk payloads to start off with. Check the payloads folder
+NOTE: We have added some apk payloads for you to start off with. Check the payloads folder.
 
 ────────────────────────────────────────
 
@@ -97,7 +97,7 @@ Select an option by entering the corresponding number.
 
 ────────────────────────────────────────
 
-⚙️ HOW GHOSTLINK WORKS (TECHNICAL OVERVIEW)
+⚙️ HOW GHOSTLINK WORKS 
 
 GhostLink implements two real‑world drive‑by attack techniques commonly used by real attackers.
 
@@ -105,7 +105,7 @@ GhostLink implements two real‑world drive‑by attack techniques commonly used
 
 The victim accesses a direct file URL such as:
 
-http://127.0.0.1:8080/example.apk
+http://127.0.0.1:8080/christ.apk
 
 The server forces an immediate download using the HTTP header:
 
@@ -141,7 +141,7 @@ This demonstrates:
 
 ────────────────────────────────────────
 
-🌍 REMOTE ACCESS (OPTIONAL)
+🌍 REMOTE ACCESS 
 
 GhostLink can be safely exposed to the internet using Cloudflare Tunnel:
 
