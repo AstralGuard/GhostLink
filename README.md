@@ -1,188 +1,206 @@
-=====================================================================
-                           GHOSTLINK
-        Drive-By Download Demonstration & Red-Team Lab Server
-                 By AstralGuard Cyber Academy
-=====================================================================
+# 👻 GhostLink  
+### Drive-By Download Demonstration & Red-Team Lab Server  
+**By AstralGuard Cyber Academy**
 
-GhostLink is an elite red-team educational tool that simulates real-world
-drive-by download attacks in a safe controlled lab environment. It allows
-students and security professionals to experience silent payload delivery,
-redirect-based attack chains, live victim logging, and stealth techniques
-used by real attackers — strictly for DEFENSIVE EDUCATION.
+---
 
-This tool was designed and built for cybersecurity awareness, red-team
-training, blue-team detection, and attack surface understanding.
+## 🚀 Overview
 
----------------------------------------------------------------------
-CREATED BY
----------------------------------------------------------------------
-AstralGuard Cyber Academy
-Training the next generation of cyber defenders.
+**GhostLink** is an elite red-team educational tool that simulates real-world **drive-by download attacks** in a **safe, controlled lab environment**.  
+It allows students and professionals to experience:
 
----------------------------------------------------------------------
-FEATURES
----------------------------------------------------------------------
-• Direct drive-by download simulation  
-• Template-based (HTML + redirect) drive-by attack simulation  
-• Live logging of:
-  - Victim IP address
-  - Timestamp
-  - Downloaded file
-  - User-Agent
-• Clean interactive terminal menu
-• Professional ASCII banner interface
-• Safe local lab execution
-• Cloudflare Tunnel compatible for remote demos
-• Zero external Python dependencies
-• Designed for ethical education and demonstrations
+- Silent payload delivery  
+- Redirect-based attack chains  
+- Real-time victim logging  
+- Stealth tactics used by real attackers  
 
----------------------------------------------------------------------
-REQUIREMENTS
----------------------------------------------------------------------
-• Python 3.8+
-• Linux / macOS / Windows
-• No external Python libraries required
+⚠️ **Strictly for defensive cybersecurity education and awareness.**
 
----------------------------------------------------------------------
-INSTALLATION
----------------------------------------------------------------------
+---
 
-1. Clone the repository:
-   git clone https://github.com/YOUR-USERNAME/ghostlink.git
+## 🏛 Created By
 
-2. Navigate into the directory:
-   cd ghostlink
+**AstralGuard Cyber Academy**  
+*Training the next generation of cyber defenders.*
 
-3. Initialize the environment:
-   ./setup.sh
+---
 
-   (This checks Python installation and prepares the environment)
+## ✨ Features
 
-4. Prepare payloads folder:
-   Place all demonstration files inside the "payloads" directory.
+- ✅ Direct drive-by download simulation  
+- ✅ Template-based HTML + redirect attack simulation  
+- ✅ Live logging of:
+  - Victim IP Address  
+  - Timestamp  
+  - Downloaded File  
+  - User-Agent  
+- ✅ Interactive terminal menu  
+- ✅ Professional ASCII banner  
+- ✅ Safe local lab execution  
+- ✅ Cloudflare Tunnel support for remote demos  
+- ✅ Zero external Python dependencies  
+- ✅ Built for ethical education & demonstrations  
 
----------------------------------------------------------------------
-RUNNING GHOSTLINK
----------------------------------------------------------------------
+---
 
-Start the tool:
-   python3 ghostlink.py
+## 🧰 Requirements
 
-You will see an interactive menu:
+- Python **3.8+**
+- Linux / macOS / Windows
+- No external Python libraries required
 
-  [1] Start Server
-  [2] Stop Server
-  [3] About
-  [4] Exit
+---
 
+## 📦 Installation
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/AstralGuard/GhostLink.git
+2️⃣ Navigate Into the Project
+bash
+Copy code
+cd ghostlink
+3️⃣ Initialize the Environment
+bash
+Copy code
+./setup.sh
+This checks Python installation and prepares the environment automatically.
+
+4️⃣ Prepare Payloads
+Place all demonstration files inside the payloads/ directory.
+
+▶️ Running GhostLink
+Start the tool with:
+
+bash
+Copy code
+python3 ghostlink.py
+You will see the interactive menu:
+
+csharp
+Copy code
+[1] Start Server
+[2] Stop Server
+[3] About
+[4] Exit
 Select an option by entering the corresponding number.
 
----------------------------------------------------------------------
-HOW GHOSTLINK WORKS (TECHNICAL OVERVIEW)
----------------------------------------------------------------------
+⚙️ How GhostLink Works (Technical Overview)
+GhostLink simulates two real-world drive-by attack techniques used by attackers:
 
-GhostLink simulates two real-world drive-by delivery methods:
+🧨 1. Direct Drive-By Mode
+Victim accesses a direct file URL:
 
-========================
-1) DIRECT DRIVE-BY MODE
-========================
-In this mode, a victim accesses a direct file URL such as:
+text
+Copy code
+http://127.0.0.1:8080/christ.apk
+The server immediately forces a download using:
 
-http://127.0.0.1:8080/test.apk
-
-The server immediately forces a download using the HTTP header:
+css
+Copy code
 Content-Disposition: attachment
+This simulates:
 
-This mimics malicious file delivery from compromised servers,
-malvertising links, or phishing campaigns.
+Malvertising
 
-Victim activity is silently logged to:
+Phishing payload drops
+
+Compromised server delivery
+
+✅ All activity is silently logged to:
+
+text
+Copy code
 server_logs.txt
+🕵️ 2. Template (Redirect) Mode
+This simulates real-world exploit kit behavior:
 
-========================
-2) TEMPLATE (REDIRECT) MODE
-========================
-This mode simulates what real attackers do:
+Victim opens an innocent-looking HTML page
 
-1. Victim loads an innocent-looking HTML page.
-2. The page silently triggers the download in the background.
-3. The page immediately redirects the victim to a legitimate-looking
-   website or awareness page.
-4. Victim believes they were only redirected, unaware the payload
-   already downloaded.
+Page silently triggers a background download
 
-This method demonstrates:
-• Exploit kit behavior
-• Malvertising delivery chains
-• Drive-by infection realism
-• User deception tactics
+Page immediately redirects to a legit site
 
----------------------------------------------------------------------
-REMOTE ACCESS (OPTIONAL)
----------------------------------------------------------------------
+Victim believes it was just a redirect — but payload already dropped ✅
 
-GhostLink can be safely exposed to the internet using Cloudflare Tunnel
-for live classroom demonstrations without opening ports or exposing
-your IP address.
+Demonstrates:
 
-This allows students to experience real-world delivery remotely in a
-completely controlled environment.
+Exploit-kit chains
 
----------------------------------------------------------------------
-LOG FILE
----------------------------------------------------------------------
+Silent infections
 
-All downloads are recorded in:
+User deception
+
+Stealth delivery
+
+🌍 Remote Access (Optional)
+GhostLink can be safely exposed to the internet using Cloudflare Tunnel:
+
+✅ No port opening
+✅ No IP exposure
+✅ Full HTTPS
+✅ Instant shutdown after demo
+
+Perfect for remote student demonstrations in a controlled environment.
+
+📝 Logging
+All download activity is recorded in:
+
+text
+Copy code
 server_logs.txt
-
 Each entry includes:
-• Timestamp
-• Victim IP
-• Downloaded file
-• User-Agent
 
----------------------------------------------------------------------
-EDUCATIONAL USE & LEGAL NOTICE
----------------------------------------------------------------------
+Timestamp
 
-This tool is strictly for:
-• Cybersecurity education
-• Defensive research
-• Red-team & blue-team training
-• Malware awareness programs
+Victim IP
 
-Any use of this tool for illegal activity, unauthorized access, or
-malicious exploitation is strictly prohibited.
+Downloaded File
 
-The authors, AstralGuard Cyber Academy, and contributors assume NO
-liability for misuse of this software.
+User-Agent
 
----------------------------------------------------------------------
-OPEN SOURCE & COMMUNITY
----------------------------------------------------------------------
+⚠️ Legal & Educational Disclaimer
+GhostLink is strictly for:
 
+Cybersecurity education
+
+Defensive research
+
+Red-team & blue-team training
+
+Malware awareness programs
+
+❌ Illegal or unauthorized use is strictly prohibited.
+
+AstralGuard Cyber Academy and contributors assume NO liability for misuse.
+
+🌟 Open-Source & Community
 GhostLink is open-source for educational purposes.
 
 You are encouraged to:
-• Star ⭐ the repository
-• Fork 🍴 it
-• Clone it
-• Modify the source code
-• Build your own lab extensions
-• Contribute improvements
+
+⭐ Star the repository
+
+🍴 Fork it
+
+📥 Clone it
+
+🛠 Modify the code
+
+🧪 Build your own lab extensions
+
+🔁 Contribute improvements
 
 Knowledge grows when shared responsibly.
 
----------------------------------------------------------------------
-CREDITS & COPYRIGHT
----------------------------------------------------------------------
+📜 License
+This project is released under the MIT License — free to use, modify, and distribute for educational purposes with attribution.
 
-© AstralGuard Cyber Academy  
+© Copyright
+© AstralGuard Cyber Academy
 All Rights Reserved.
 
-GhostLink is developed as part of AstralGuard’s professional
-cybersecurity training and awareness programs.
+Developed as part of AstralGuard’s professional cybersecurity training programs.
 
----------------------------------------------------------------------
-STAY ELITE. STAY SECURE.
----------------------------------------------------------------------
+👑 Motto
+Stay Elite. Stay Secure.
