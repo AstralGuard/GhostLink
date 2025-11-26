@@ -1,4 +1,5 @@
 👻 GHOSTLINK
+
 Drive‑By Download Demonstration & Red‑Team Lab Server
 By AstralGuard Cyber Academy
 
@@ -48,7 +49,7 @@ Training the next generation of cyber defenders.
 🧰 REQUIREMENTS
 
 • Python 3.8 or higher
-• Linux, macOS, or Windows
+• Linux
 • No external Python libraries required
 
 ────────────────────────────────────────
@@ -61,7 +62,7 @@ git clone https://github.com/AstralGuard/GhostLink.git
 
 Navigate into the project directory
 
-cd ghostlink
+cd GhostLink
 
 Initialize the environment
 
@@ -72,6 +73,10 @@ This script verifies Python installation and prepares the environment automatica
 Prepare payloads
 
 Place all demonstration files inside the payloads directory.
+
+────────────────────────────────────────
+
+NOTE: We have added some apk payloads to start off with. Check the payloads folder
 
 ────────────────────────────────────────
 
